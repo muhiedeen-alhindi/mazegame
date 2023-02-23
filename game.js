@@ -37,6 +37,15 @@ for (let i = 0; i < length; i += 1){
     boundaries[i].addEventListener("mouseover",function(){
         status.innerHTML="lost"
 
+     boundaries[i].style.backgroundColor = "red"; 
+
+    });
+    boundaries[i].addEventListener("mouseout",function(){
+        status.innerHTML="tryagain"
+
+     boundaries[i].style.backgroundColor = "white"; 
+     
+
     });
 
 };
