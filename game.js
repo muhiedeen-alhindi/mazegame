@@ -4,7 +4,17 @@ window.onload=function(){
     var end = document.getElementById('end');
     var boundaries = document.getElementsByClassName('boundary');
     var status = document.getElementById('status');
-    console.log(end)
+     
+
+
+    var score = document.getElementsByClassName('boundary example');
+    
+  
+  var newelement=document.createElement("h3")
+
+  newelement.textContent = 'Score='+0;
+  score[0].appendChild(newelement);
+newelement.style.marginTop="-1px"
  
 start.addEventListener("mouseover", function() {
     start.style.backgroundColor = "red";
@@ -52,9 +62,6 @@ for (let i = 0; i < length; i += 1){
    
  
 
- 
- 
- 
  
 };
 
