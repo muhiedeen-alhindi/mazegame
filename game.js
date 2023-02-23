@@ -5,7 +5,7 @@ window.onload=function(){
     var boundaries = document.getElementsByClassName('boundary');
     var status = document.getElementById('status');
      
-
+    var z =0;
 
     var score = document.getElementsByClassName('boundary example');
     
@@ -39,6 +39,13 @@ end.addEventListener("mouseover", function() {
  end.addEventListener("mouseout", function() {
     end.style.backgroundColor = "white";
     status.innerHTML="you win"
+    var x =true;
+   
+        score[0].innerHTML =z ;
+        z+=1;
+
+     
+   
  
 });
  
@@ -46,15 +53,19 @@ end.addEventListener("mouseover", function() {
 for (let i = 0; i < length; i += 1){
     boundaries[i].addEventListener("mouseover",function(){
         status.innerHTML="lost"
-
+        
      boundaries[i].style.backgroundColor = "red"; 
+     score[0].innerHTML =0 ;
+     z=0;
 
     });
     boundaries[i].addEventListener("mouseout",function(){
         status.innerHTML="tryagain"
 
      boundaries[i].style.backgroundColor = "white"; 
-     
+      
+     score[0].innerHTML =0 ;
+     z=0;
 
     });
 
