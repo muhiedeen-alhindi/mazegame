@@ -39,10 +39,10 @@ end.addEventListener("mouseover", function() {
  end.addEventListener("mouseout", function() {
     end.style.backgroundColor = "white";
     status.innerHTML="you win"
-    var x =true;
-   
+    
+         z+=1;
         score[0].innerHTML =z ;
-        z+=1;
+        
 
      
    
