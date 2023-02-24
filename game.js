@@ -4,16 +4,17 @@ window.onload=function(){
     var end = document.getElementById('end');
     var boundaries = document.getElementsByClassName('boundary');
     var status = document.getElementById('status');
-     
     var z =0;
 
-    var score = document.getElementsByClassName('boundary example');
+
+
+ var score = document.getElementsByClassName('boundary example');
     
   
   var newelement=document.createElement("h3")
 
-  newelement.textContent = 'Score='+0;
-  score[0].appendChild(newelement);
+  newelement.innerHTML = 'Score='+0;
+  score[0].appendChild(newelement);  
 newelement.style.marginTop="-1px"
  
 start.addEventListener("mouseover", function() {
@@ -43,11 +44,7 @@ end.addEventListener("mouseover", function() {
     status.innerHTML="you win"
     
          z+=1;
-        score[0].innerHTML =z ;
-        
-
-     
-   
+        score[0].innerHTML =z ;          
  
 });
  
@@ -57,27 +54,22 @@ for (let i = 0; i < length; i += 1){
         status.innerHTML="lost"
       for (let j=0;j<length-1;j++) {
         boundaries[j].style.backgroundColor = "red"; 
-     
-
       }  
-     
-  
- 
-    });
-    // boundaries[i].addEventListener("mouseout",function(){
-    //     status.innerHTML="tryagain"
-
-    //  boundaries[i].style.backgroundColor = "white"; 
-      
-    //  score[0].innerHTML =0 ;
-    //  z=0;
-
-    // });
-
+     });
 };
    
- 
-
+   start.addEventListener("click",function(){
+    for (let i=0;i<length;i++){
+        boundaries[i].style.backgroundColor="white"
+        for (let j=0;j<length;j++){
+            boundaries[j].style.backgroundColor="white"
+        }
+    }
+    
+   }
+   )
+    
+  
  
 };
 
