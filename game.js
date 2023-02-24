@@ -49,8 +49,8 @@ end.addEventListener("mouseover", function() {
  
 });
  
-  let length=boundaries.length
-for (let i = 0; i < length; i += 1){
+  var length=boundaries.length
+for (var i = 0; i < length; i += 1){
     boundaries[i].addEventListener("mouseover",function(){
         status.innerHTML="lost"
         
