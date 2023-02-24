@@ -17,18 +17,20 @@ window.onload=function(){
 newelement.style.marginTop="-1px"
  
 start.addEventListener("mouseover", function() {
-    start.style.backgroundColor = "red";
+     
     status.innerHTML="start the game"
     
 });
  
 start.addEventListener("mouseout", function() {
-   start.style.backgroundColor = "white";
+    
     status.innerHTML="continue without touching the walls"
- 
+    
 });
 
-
+ start.addEventListener("click",function(){
+   z
+ })
 end.addEventListener("mouseover", function() {
     end.style.backgroundColor = "red";
     status.innerHTML="you win"
@@ -50,24 +52,27 @@ end.addEventListener("mouseover", function() {
 });
  
   var length=boundaries.length
-for (var i = 0; i < length; i += 1){
+for (let i = 0; i < length; i += 1){
     boundaries[i].addEventListener("mouseover",function(){
         status.innerHTML="lost"
-        
-     boundaries[i].style.backgroundColor = "red"; 
-     score[0].innerHTML =0 ;
-     z=0;
+      for (let j=0;j<length-1;j++) {
+        boundaries[j].style.backgroundColor = "red"; 
+     
 
+      }  
+     
+  
+ 
     });
-    boundaries[i].addEventListener("mouseout",function(){
-        status.innerHTML="tryagain"
+    // boundaries[i].addEventListener("mouseout",function(){
+    //     status.innerHTML="tryagain"
 
-     boundaries[i].style.backgroundColor = "white"; 
+    //  boundaries[i].style.backgroundColor = "white"; 
       
-     score[0].innerHTML =0 ;
-     z=0;
+    //  score[0].innerHTML =0 ;
+    //  z=0;
 
-    });
+    // });
 
 };
    
