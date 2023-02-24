@@ -5,6 +5,13 @@ window.onload=function(){
     var boundaries = document.getElementsByClassName('boundary');
     var status = document.getElementById('status');
     var z =0;
+    var gameboundry= document.getElementById("game")
+
+  
+
+  
+
+
 
 
 
@@ -54,20 +61,27 @@ for (let i = 0; i < length; i += 1){
         status.innerHTML="lost"
       for (let j=0;j<length-1;j++) {
         boundaries[j].style.backgroundColor = "red"; 
-      }  
+      } 
+      z=0;
+      score[0].innerHTML =z ;   
      });
 };
    
    start.addEventListener("click",function(){
+    
     for (let i=0;i<length;i++){
         boundaries[i].style.backgroundColor="white"
+             
+
         for (let j=0;j<length;j++){
             boundaries[j].style.backgroundColor="white"
         }
     }
-    
-   }
-   )
+     
+    z=0;
+    score[0].innerHTML =z ;  
+   });
+   
     
   
  
